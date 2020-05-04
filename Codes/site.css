@@ -1,0 +1,63 @@
+.container{
+	margin: 0 auto;
+	height: 1400px;
+	width: 100%;
+	background-color: #C8F0F5;
+}
+.topheader{
+	height: 3%;
+	width: 100%;
+	background-color: #004F59;
+}
+.header{
+	height: 10%;
+	width: 100%;
+}
+.logo{
+	height: 95%;
+	width: 25%;
+	float: left;
+	margin-top: 10px;
+}
+.navbar{
+	background-color: #56A5EC;
+	opacity: 0.3;
+	height: 5%;
+	width: 100%;
+}
+.maincontent{
+	height: 65%;
+	width: 100%;
+	background-color: #ADD8E6;
+	background-image: url("containership.jpg");
+	background-size: cover;
+	background-position: bottom;
+}
+.introducing{
+	width: 100%;
+	float: left;
+	/*margin-left: 2%;*/
+}
+.paragraf{
+	height: 300px;
+	width: 50%;
+	background-color: #ADD8E6;
+	margin-top: 50px;
+	/*margin-left: 15%;
+	margin-right: 25%;*/
+	margin-left: auto; 
+	margin-right:auto;
+}
+.footer{
+	height: 13%;
+	width: 100%;
+	background-color: #ADD8E6;
+}
+.copyright{
+	height: 4%;
+	width: 100%;
+	background-color: #659EC7;
+}
+a{
+	color: white;
+}
