@@ -1,0 +1,130 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+
+<!-- index.html -->
+<!-- Displays an h:dataTable of the addresses in the address book -->
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core">
+    <h:head>
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css"></link>
+        <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css"></link>
+
+        <link rel="stylesheet" href="site.css"></link>
+        <title>Taşımacılık A.Ş</title>
+    </h:head>
+
+    <h:body>
+        <div class="container">
+            <div class="topheader">
+
+                <marquee style="float:right;color:white;font-weight:bold;margin-right:4%;margin-top:1%">Call Us Today! 506-389-9430</marquee>
+            </div>
+            <div class="header">
+                <div class="logo">
+                    <img src="logo.png" style="height: 100%;width:100%;margin-left:5%;"></img>
+                </div>
+
+                <h1 style="margin-right:10%;margin-top:2%;float:right;font-weight:bold;font-family:Stencil Std, fantasy;font-size:45px;color:#004F59;text-shadow: 4px 4px #56A5EC">Maritime Global Export Logistics</h1>
+            </div>
+            <div class="navbar">
+                <ul >
+                    <style>
+                        li {
+                            float:left;
+                            display: inline;
+
+                        }
+                        a:link {
+                            text-shadow: 2px 2px #004F59;
+
+                            font-size:20px;
+                            text-decoration: none;
+                            margin-left:5px;
+                            font-weight:bold;
+                        }
+                        button{
+                            padding:25px 20px 25px 20px ;
+                            background-color:Transparent;
+                            border:none;
+
+                            cursor:pointer;
+                            color:white;
+                        }
+                        button:hover{
+                            transform: scale(1.1);
+                            transition-duration: 2s;
+                            background-color: #004F59;
+                        }
+                        i{
+                            color:white;
+                        }
+                        .de:hover{
+                            transition-duration: 2s;
+
+                            transform: scale(1.1); /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
+                        }
+                        img:hover{
+                            transition-duration: 2s;
+
+                            transform: scale(1.1); 
+                        }
+                        img{
+                            border-radius:15px;
+                        }
+                        commandButton{
+                            padding:25px 30px 30px 30px ;
+                            background-color:Transparent;
+                            border:none;
+                            cursor:pointer;
+                        }
+                        commandButton:hover{
+                            transform: scale(1.1);
+                            transition-duration: 2s;
+                            background-color: #004F59; 
+                        }
+                    </style>
+
+                    <li><button><i class="fas fa-home"></i><a href="index.xhtml">Home</a></button></li>
+                    <li><button><i class="fas fa-coins"></i><a href="calculate.xhtml">Wage Calculation</a></button></li>
+                    <li><button style="display:#{login.gosterhesabım()}" ><i class="fas fa-dolly"></i><a href="tracking.xhtml">Shipment tracking</a></button></li>
+
+                    <li><button><i class="fas fa-truck"></i><a href="vehicles.xhtml">Vehicles</a></button></li>
+                    <li><button style="display:#{login.gosterhesabım()}" ><i class="fas fa-store-alt"></i><a href="createcargo.xhtml">Create Cargo</a></button></li>
+
+                    <li><button style="display:#{login.goster()}"><i class="fas fa-user"></i><a href="login.xhtml">Login</a></button></li>
+
+                    <li><button style="display:#{login.goster()}"><i class="fas fa-user-plus"></i><a href="signup.xhtml">Sign Up</a></button></li>
+
+                    <li><button><i class="fas fa-phone"></i><a href="contact.xhtml">Contact</a></button></li>
+                    <li><button><i class="fas fa-address-card"></i><a href="about.xhtml">About</a></button></li>
+                    <li><button><i class="fas fa-store"></i><a href="branches.xhtml">Branches</a></button></li>
+                    <li><button style="display:#{login.gosterhesabım()} ;background-color: #004F59;" ><i class="fas fa-user-alt"></i><a href="hesabim.xhtml">Profile</a></button></li>
+
+                    <li><button style="display:#{login.gosterhesabım()}"><i style="float:left;" class="fas fa-sign-out-alt fa-lg">
+                    <h:form >
+                    <h:commandButton  action="#{login.logout()}" value="Log Out" style="font-size:10pt;color:white;float:right;background-color:transparent;border:none;cursor:pointer;color:white; display:#{login.gosterhesabım()}"/>
+                    </h:form></i></button></li>
+                </ul>
+            </div>
+            <div class="maincontent">
+                <img src="ship.jpg" style="height: 50%;width:45%;margin-top:50px;margin-left:50px "></img>
+                <img src="container.jpg" style="height: 50%;width:45%;float:right;margin-top:50px;margin-right:50px;"></img>
+                <div class="introducingIndex" style="width:60%;float:left;margin-left:4%;">
+                    <p class="de" style="border: 10px solid  #004F59;border-radius: 15px; padding: 10px; background-color: #ADD8E6;font-size:25px;margin-left: 1%;margin-top: 5%;">  Vehicle transportation and freight is our specialization, we ship used cars, vans, SUVs, trucks/trailers, motorcycles and heavy equipment of all types to over 150 international ports every week. Africa, Asia, Europe, Middle East, South and Central America are some of our most popular destinations. We are also experienced international movers for individuals or families relocating internationally.
+                        We offer flexible and customized freight services to every major international destination.  We ensure the safe handling and delivery of all shipments, your precious shipments are in safe hands.
+                        Call us for a free quote or fill out our online quotation form and one of our Freight Specialist will be glad to help.</p>
+                </div>
+                <img src="imageintroduction.jpg" style="width:30%;float:right;height:30%;margin-right:2%;margin-top:2%"></img>		
+
+            </div>
+            <div class="footer">
+            </div>
+            <div class="copyright">
+                <p style="float:left;color:white;font-weight:bold;margin-left:40%">Copyright 2019 - Maritime Global Export Logistics</p>
+            </div>
+        </div>
+    </h:body>
+</html>
+
