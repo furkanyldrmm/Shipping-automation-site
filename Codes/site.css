@@ -1,3 +1,23 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 04.May.2020, 16:28:28
+    Author     : furkan y
+*/
+
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 04.May.2020, 14:13:17
+    Author     : furkan y
+*/
+
 .container{
 	margin: 0 auto;
 	height: 1400px;
@@ -21,16 +41,13 @@
 }
 .navbar{
 	background-color: #56A5EC;
-	opacity: 0.3;
 	height: 5%;
 	width: 100%;
 }
 .maincontent{
 	height: 65%;
 	width: 100%;
-	background-color: #ADD8E6;
-	background-image: url("containership.jpg");
-	background-size: cover;
+        
 	background-position: bottom;
 }
 .introducing{

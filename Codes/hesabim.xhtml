@@ -10,7 +10,7 @@
     <h:head>
         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css"></link>
         <link rel="stylesheet" href="site.css"></link>
-        <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css"></link>
+                <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css"></link>
 
         <title>Taşımacılık A.Ş</title>
     </h:head>
@@ -25,8 +25,8 @@
                 <div class="logo">
                     <img src="logo.png" style="height: 100%;width:100%;margin-left:5%;"></img>
                 </div>
-                <h1 style="margin-right:10%;margin-top:2%;float:right;font-weight:bold;font-family:Stencil Std, fantasy;font-size:45px;color:#004F59;text-shadow: 4px 4px #56A5EC">Maritime Global Export Logistics</h1>
 
+                <h1 style="margin-right:10%;margin-top:4%;float:right;font-weight:bold;font-family:Stencil Std, fantasy;font-size:40px;">Maritime Global Export Logistics</h1>
             </div>
             <div class="navbar">
                 <ul >
@@ -49,9 +49,9 @@
 
                             background-color:Transparent;
                             border:none;
-                            cursor:pointer;
                             color:white;
 
+                            cursor:pointer;
                         }
                         button:hover{
                             transform: scale(1.1);
@@ -65,7 +65,6 @@
                         .paragraf{
                             border: 8px solid #004F59;
                             border-radius:8px;
-                            padding:0px;
                         }
                         .paragraf:hover{
                             transition-duration: 2s;
@@ -80,13 +79,32 @@
                         img{
                             border-radius:15px;
                         }
+                        .welcome{
+border: 5px solid #004F59;
+opacity: 0.7;
+                          height: 200px;
+                          width: 50%;
+                          background-color:#F2F2F2;
+                          border-radius:10px;
+                          margin-top:50px;
+                          margin-left:25%;
 
-
+                        }
+                        .cargos{
+                                                      opacity: 0.7;
+border:5px solid #004F59;
+                            width: 50%;
+                              margin-top:50px;
+                            margin-left:25%;
+                            background-color: #f2f2f2;
+                            padding: 20px;
+                            border-radius: 10px;
+                            height: 500px;
+                        }
                     </style>
                     <li><button><i class="fas fa-home"></i><a href="index.xhtml">Home</a></button></li>
                     <li><button><i class="fas fa-coins"></i><a href="calculate.xhtml">Wage Calculation</a></button></li>
                     <li><button style="display:#{login.gosterhesabım()}" ><i class="fas fa-dolly"></i><a href="tracking.xhtml">Shipment tracking</a></button></li>
-
                     <li><button><i class="fas fa-truck"></i><a href="vehicles.xhtml">Vehicles</a></button></li>
                     <li><button style="display:#{login.gosterhesabım()}" ><i class="fas fa-store-alt"></i><a href="createcargo.xhtml">Create Cargo</a></button></li>
 
@@ -95,28 +113,27 @@
                     <li><button style="display:#{login.goster()}"><i class="fas fa-user-plus"></i><a href="signup.xhtml">Sign Up</a></button></li>
 
                     <li><button><i class="fas fa-phone"></i><a href="contact.xhtml">Contact</a></button></li>
-                   
-                  <li><button style="background-color: #004F59;"><i class="fas fa-address-card"></i><a href="about.xhtml">About</a></button></li>
-                    <li><button><i class="fas fa-store"></i><a href="branches.xhtml">Branches</a></button></li>
+                    <li><button><i class="fas fa-address-card"></i><a href="about.xhtml">About</a></button></li>
+                     <li><button><i class="fas fa-store"></i><a href="branches.xhtml">Branches</a></button></li>
                     <li><button style="display:#{login.gosterhesabım()} ;background-color: #004F59;" ><i class="fas fa-user-alt"></i><a href="createcargo.xhtml">Profile</a></button></li>
 
-                  <li><button style="display:#{login.gosterhesabım()}"><i style="float:left;" class="fas fa-sign-out-alt fa-lg">
+                    <li><button style="display:#{login.gosterhesabım()}"><i style="float:left;" class="fas fa-sign-out-alt fa-lg">
                     <h:form >
                     <h:commandButton  action="#{login.logout()}" value="Log Out" style="font-size:10pt;color:white;float:right;background-color:transparent;border:none;cursor:pointer;color:white; display:#{login.gosterhesabım()}"/>
                     </h:form></i></button></li>
+                     
                 </ul>
             </div>
             <div class="maincontent">
-                <div class="introducing">
-                    <div class="paragraf" >
-                        <p style="font-size:20px;padding:10px;">Maritime is a global company with one of the most recognized and admired brands in the world. Occasionally, fraudsters take advantage of Maritime's reputation by using our name or services to target your personal and sensitive business information. By creating tempting downloads and attractive websites, fraudsters can lure you to links that prompt you to enter sensitive information or download malware -- malicious software such as viruses or spyware. While Maritime is not liable for the actions of third parties, we are working to prevent and detect fraud where possible.</p>
-                    </div>
-
-                    <img src="harita.png" style="width:1100px;height:300px;margin-left: 20%;margin-top:5%"></img>
-                    <p style="text-align:center;width:50%;border: 1px solid black; padding: 10px; background-color: #ADD8E6;font-size:25px;margin-left: auto; margin-right:auto;margin-top: 1%;">Adress:Üniversite Mahallesi, İstanbul Üniversitesi - Cerrahpaşa Avcılar Kampüsü, Avcılar</p>
-
-                </div>
+                <div class="welcome">
+                <h1 style="text-align:center;"> Welcome</h1>
+                <h2 style="text-align:center;">#{login.email}</h2>
             </div>
+           
+            <div class="cargos">
+                <h1 style="text-align: center">Last Cargoes</h1>
+            </div>
+        </div>
             <div class="footer">
 
             </div>

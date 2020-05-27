@@ -1,134 +1,153 @@
 <?xml version='1.0' encoding='UTF-8' ?>
 
 <!-- index.html -->
- <!-- Displays an h:dataTable of the addresses in the address book -->
- <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
- "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
- <html xmlns="http://www.w3.org/1999/xhtml"
- xmlns:h="http://java.sun.com/jsf/html"
- xmlns:f="http://java.sun.com/jsf/core">
- <h:head>
- <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css"></link>
- <link rel="stylesheet" href="site.css"></link>
- <title>Taşımacılık A.Ş</title>
- </h:head>
-     
- <h:body>
-     <div class="container">
-		<div class="topheader">
-		
-<marquee style="float:right;color:white;font-weight:bold;margin-right:4%;margin-top:1%">Call Us Today! 506-389-9430</marquee>
+<!-- Displays an h:dataTable of the addresses in the address book -->
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core">
+    <h:head>
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css"></link>
+        <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css"></link>
+
+        <link rel="stylesheet" href="site.css"></link>
+        <title>Taşımacılık A.Ş</title>
+    </h:head>
+
+    <h:body>
+        <div class="container">
+            <div class="topheader">
+
+                <marquee style="float:right;color:white;font-weight:bold;margin-right:4%;margin-top:1%">Call Us Today! 506-389-9430</marquee>
+            </div>
+            <div class="header">
+                <div class="logo">
+                    <img src="logo.png" style="height: 100%;width:100%;margin-left:5%;"></img>
+                </div>
+
+                <h1 style="margin-right:10%;margin-top:2%;float:right;font-weight:bold;font-family:Stencil Std, fantasy;font-size:45px;color:#004F59;text-shadow: 4px 4px #56A5EC">Maritime Global Export Logistics</h1>
+
+            </div>
+            <div class="navbar">
+                <ul >
+                    <style>
+                        li {
+                            float:left;
+                            display: inline;
+
+                        }
+                        a:link {
+                            text-shadow: 2px 2px #004F59;
+
+                            font-size:20px;
+                            text-decoration: none;
+                            margin-left:5px;
+                            font-weight:bold;
+                        }
+                        button{
+                            padding:25px 20px 25px 20px ;
+
+                            background-color:Transparent;
+                            border:none;
+                            cursor:pointer;
+                            color:white;
+
+                        }
+                        button:hover{
+                            transform: scale(1.1);
+
+                            transition-duration: 2s;
+                            background-color: #004F59;
+                        }
+                        i{
+                            color:white;
+                        }
+
+                        .paragraf{
+                            border: 5px solid black;
+                        }
+                        input[type=text],input[type=password], select {
+                            width: 100%;
+                            padding: 12px 20px;
+                            margin: 8px 0;
+                            display: inline-block;
+                            border: 1px solid #ccc;
+                            border-radius: 4px;
+                            box-sizing: border-box;
+                        }
+
+                        input[type=submit] {
+                            width: 100%;
+                            background-color:#ADD8E6;
+                            color: white;
+                            padding: 14px 20px;
+                            margin: 8px 0;
+                            border: none;
+                            border-radius: 4px;
+                            cursor: pointer;
+                        }
+
+                        input[type=submit]:hover {
+                            background-color: #45a049;
+                        }
+                        .formdiv {
+                            margin-top:50px;
+                            margin-left:50%;
+                            border-radius: 5px;
+                            background-color: #f2f2f2;
+                            padding: 20px;
+                        }
+                      
+
+                    </style>
+                    <li><button><i class="fas fa-home"></i><a href="index.xhtml">Home</a></button></li>
+                    <li><button><i class="fas fa-coins"></i><a href="calculate.xhtml">Wage Calculation</a></button></li>
+                    <li><button style="display:#{login.gosterhesabım()}" ><i class="fas fa-dolly"></i><a href="tracking.xhtml">Shipment tracking</a></button></li>
+
+                    <li><button><i class="fas fa-truck"></i><a href="vehicles.xhtml">Vehicles</a></button></li>
+                    <li><button style="display:#{login.gosterhesabım()}" ><i class="fas fa-store-alt"></i><a href="createcargo.xhtml">Create Cargo</a></button></li>
+                    <li><button style="display:#{login.goster()}"><i class="fas fa-user"></i><a href="login.xhtml">Login</a></button></li>
+                    <li><button style="display:#{login.gosterhesabım()}"><i class="fas fa-user"></i><a href="hesabim.xhtml">Hesabım</a></button></li>
+                    <li><button style="display:#{login.goster()}"><i class="fas fa-user-plus"></i><a href="signup.xhtml">Sign Up</a></button></li>
+                    <li><button><i class="fas fa-phone"></i><a href="contact.xhtml">Contact</a></button></li>
+                    <li><button><i class="fas fa-address-card"></i><a href="about.xhtml">About</a></button></li>
+                              <li><button><i class="fas fa-store"></i><a href="branches.xhtml">Branches</a></button></li>
+                    <li><button style="display:#{login.gosterhesabım()} ;background-color: #004F59;" ><i class="fas fa-user-alt"></i><a href="hesabim.xhtml">Profile</a></button></li>
+
+                    <li><button style="display:#{login.gosterhesabım()}"><i style="float:left;" class="fas fa-sign-out-alt fa-lg">
+                    <h:form >
+                    <h:commandButton  action="#{login.logout()}" value="Log Out" style="font-size:10pt;color:white;float:right;background-color:transparent;border:none;cursor:pointer;color:white; display:#{login.gosterhesabım()}"/>
+                    </h:form></i></button></li>
+                </ul>
+            </div>
+            <div class="maincontent">
+                <div class="introducingLogin" style="width:60%;float:left;margin-left:2%;">
+                    <div class="formdiv" style="padding: 50px;border:5px solid #004F59;border-radius:20px;             opacity:0.7;   background-color:#F2F2F2;">
+                        <h:form  >
+                            <h1 style="text-align: center;font-weight: bold;font-size: 25pt;">Login </h1>
+
+                            <h:outputLabel style= "font-size: 16pt " value="E-Mail"/><!--E-Posta-->
+                            <h:inputText value="#{login.email}" required="true"
+                                         requiredMessage="E-mailinizi giriniz"/>
+
+                            <h:outputLabel style="float:left;font-size:16pt;" value="Password"/><!--Password-->
+                            <h:inputSecret value="#{login.password}" required="true"
+                                           requiredMessage="Şifrenizi giriniz"/>
+
+                            <h:commandButton  style="color:black" value="Login" action="#{login.control()}"/>
+                        </h:form>
+
+                    </div>
+                </div>
+
+            </div>
+            <div class="footer">
+            </div>
+            <div class="copyright">
+                <p style="float:left;color:white;font-weight:bold;margin-left:40%">Copyright 2019 - Maritime Global Export Logistics</p>
+            </div>
         </div>
-        <div class="header">
-			<div class="logo">
-				<img src="logo.png" style="height: 100%;width:100%;margin-left:5%;"></img>
-			</div>
-			
-			<h1 style="margin-right:10%;margin-top:4%;float:right;font-weight:bold;font-family:Stencil Std, fantasy;font-size:40px;">Maritime Global Export Logistics</h1>
-        </div>
-         <div class="navbar">
-            <ul >
-				<style>
-				li {
-					float:left;
-					display: inline;
-					border-left:1px solid;
-					border-color:white;
-				}
-				a:link {
-				    font-size:20px;
-					text-decoration: none;
-					color:white;
-					margin-left:5px;
-					font-weight:bold;
-				}
-				button{
-					padding:25px 30px 30px 30px ;
-					background-color:Transparent;
-					border:none;
-					cursor:pointer;
-				}
-				button:hover{
-					background-color:#5CB3FF;
-				}
-				i{
-					color:white;
-				}
-				.paragraf{
-				border: 5px solid black;
-				}
-				input[type=text], select {
-                width: 100%;
-                padding: 12px 20px;
-                margin: 8px 0;
-                display: inline-block;
-                border: 1px solid #ccc;
-                border-radius: 4px;
-                box-sizing: border-box;
-                }
-
-               input[type=submit] {
-               width: 100%;
-               background-color:#ADD8E6;
-               color: white;
-               padding: 14px 20px;
-               margin: 8px 0;
-               border: none;
-               border-radius: 4px;
-               cursor: pointer;
-               }
-
-              input[type=submit]:hover {
-              background-color: #45a049;
-              }
-			  .formdiv {
-               margin-top:50px;
-			   margin-left:50%;
-               border-radius: 5px;
-               background-color: #f2f2f2;
-               padding: 20px;
-               }
-
-				</style>
-               <li><button><i class="fas fa-home"></i><a href="index.xhtml">Home</a></button></li>
-               <li><button><i class="fas fa-coins"></i><a href="calculation.xhtml">Wage Calculation</a></button></li>
-			   <li><button><i class="fas fa-dolly"></i><a href="tracking.xhtml">Shipment tracking</a></button></li>
-			   <li><button><i class="fas fa-truck"></i><a href="vehicles.xhtml">Vehicles</a></button></li>
-               <li><button><i class="fas fa-store-alt"></i><a href="createcargo.xhtml">Create Cargo</a></button></li>
-               <li><button><i class="fas fa-user"></i><a href="login.xhtml">Login</a></button></li>
-			   <li><button><i class="fas fa-user-plus"></i><a href="signup.xhtml">Sign Up</a></button></li>
-               <li><button><i class="fas fa-phone"></i><a href="contact.xhtml">Contact</a></button></li>
-               <li style="border-right: 1px solid white;"><button style="background-color:#004F59"><i class="fas fa-address-card"></i><a href="about.xhtml" style="color: white;">About</a></button></li>
-            </ul>
-         </div>
-         <div class="maincontent">
-			 <div class="introducingLogin" style="width:60%;float:left;margin-left:2%;">
-  <div class="formdiv">
-  <form action="/action_page.php">
-  
-    
-
-
-    <h:outputLabel value=""/><!--E-Posta-->
-    <h:inputText value=""/>
-<h:outputLabel value=""/><!--Password-->
-    <h:inputSecret value=""/>
-    
-    
-  
-    <h:commandButton value=""/>
-  </form>
-  
-</div>
-			 </div>
-			 
-         </div>
-         <div class="footer">
-         </div>
-		 <div class="copyright">
-				<p style="float:left;color:white;font-weight:bold;margin-left:40%">Copyright 2019 - Maritime Global Export Logistics</p>
-		 </div>
-     </div>
- </h:body>
- </html>
+    </h:body>
+</html>
 

@@ -9,9 +9,9 @@
       xmlns:f="http://java.sun.com/jsf/core">
     <h:head>
         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css"></link>
+        <link rel="stylesheet" href="site.css"></link>
         <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css"></link>
 
-        <link rel="stylesheet" href="site.css"></link>
         <title>Taşımacılık A.Ş</title>
     </h:head>
 
@@ -46,46 +46,39 @@
                         }
                         button{
                             padding:25px 20px 25px 20px ;
+
                             background-color:Transparent;
                             border:none;
-
                             cursor:pointer;
                             color:white;
+
                         }
                         button:hover{
                             transform: scale(1.1);
+
                             transition-duration: 2s;
                             background-color: #004F59;
                         }
                         i{
                             color:white;
                         }
-                        .de:hover{
-                            transition-duration: 2s;
+                        .paragraf{
+                            border: 5px solid black;
+                            border-radius: 20px 20px
+                        }
+                        /*
+                  To change this license header, choose License Headers in Project Properties.
+                  To change this template file, choose Tools | Templates
+                  and open the template in the editor.
+                        */
+                        /* 
+                            Created on : 04.May.2020, 14:13:17
+                            Author     : furkan y
+                        */
 
-                            transform: scale(1.1); /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
-                        }
-                        img:hover{
-                            transition-duration: 2s;
 
-                            transform: scale(1.1); 
-                        }
-                        img{
-                            border-radius:15px;
-                        }
-                        commandButton{
-                            padding:25px 30px 30px 30px ;
-                            background-color:Transparent;
-                            border:none;
-                            cursor:pointer;
-                        }
-                        commandButton:hover{
-                            transform: scale(1.1);
-                            transition-duration: 2s;
-                            background-color: #004F59; 
-                        }
+
                     </style>
-
                     <li><button><i class="fas fa-home"></i><a href="index.xhtml">Home</a></button></li>
                     <li><button><i class="fas fa-coins"></i><a href="calculate.xhtml">Wage Calculation</a></button></li>
                     <li><button style="display:#{login.gosterhesabım()}" ><i class="fas fa-dolly"></i><a href="tracking.xhtml">Shipment tracking</a></button></li>
@@ -99,7 +92,8 @@
 
                     <li><button><i class="fas fa-phone"></i><a href="contact.xhtml">Contact</a></button></li>
                     <li><button><i class="fas fa-address-card"></i><a href="about.xhtml">About</a></button></li>
-                    <li><button><i class="fas fa-store"></i><a href="branches.xhtml">Branches</a></button></li>
+
+                      <li><button><i class="fas fa-store"></i><a href="branches.xhtml">Branches</a></button></li>
                     <li><button style="display:#{login.gosterhesabım()} ;background-color: #004F59;" ><i class="fas fa-user-alt"></i><a href="hesabim.xhtml">Profile</a></button></li>
 
                     <li><button style="display:#{login.gosterhesabım()}"><i style="float:left;" class="fas fa-sign-out-alt fa-lg">
@@ -108,23 +102,67 @@
                     </h:form></i></button></li>
                 </ul>
             </div>
-            <div class="maincontent">
-                <img src="ship.jpg" style="height: 50%;width:45%;margin-top:50px;margin-left:50px "></img>
-                <img src="container.jpg" style="height: 50%;width:45%;float:right;margin-top:50px;margin-right:50px;"></img>
-                <div class="introducingIndex" style="width:60%;float:left;margin-left:4%;">
-                    <p class="de" style="border: 10px solid  #004F59;border-radius: 15px; padding: 10px; background-color: #ADD8E6;font-size:25px;margin-left: 1%;margin-top: 5%;">  Vehicle transportation and freight is our specialization, we ship used cars, vans, SUVs, trucks/trailers, motorcycles and heavy equipment of all types to over 150 international ports every week. Africa, Asia, Europe, Middle East, South and Central America are some of our most popular destinations. We are also experienced international movers for individuals or families relocating internationally.
-                        We offer flexible and customized freight services to every major international destination.  We ensure the safe handling and delivery of all shipments, your precious shipments are in safe hands.
-                        Call us for a free quote or fill out our online quotation form and one of our Freight Specialist will be glad to help.</p>
+            <div class="maincontent"  style="background-image: url('containership.jpg')">
+                <div class="introducingTracking" style="width:60%;float:left;margin-left:2%;">
+                    <div class="paragrafTracking" style="opacity:0.7;height:200px;width:800px;background-color:white;border-radius:15px;border: 2px solid #EAEAEA;margin-top:50px;margin-left:40%;opacity: 0.7">
+                        <div class="form" >
+                            <h:form>
+                                <h1 style="text-align:center;padding:10px">Tracking No:</h1>
+                                <h:inputText style="margin-left:270px;padding:20px"></h:inputText>
+                                <h:commandButton value="Search"
+                                                 action="siparisindex" style="padding:20px; margin-left:10px;border-radius: 20px;background-color: #56A5EC;cursor:pointer;"/>
+                            </h:form>
+                        </div>
+                    </div>
+                    <div class="paragrafTracking2" style="opacity:0.5;height:300px;width:1000px;background-color:white;border-radius:1px;border: 2px solid #EAEAEA;margin-top:50px;margin-left:32%;text-align: center;opacity: 0.8">
+                        <h1 style="text-align:center;padding:10px">Tracking Detail:</h1>
+                        <h:dataTable id="tablo" value="#{siparisler.bul()}" var="myvariable"
+                                     border="1" cellpadding="10" cellspacing="3" style="font-size: 20px;margin:0px;width: 100%;height:50%;  background-image: linear-gradient(to bottom,#56A5EC,white);border:solid 5px;border-radius: 15px;border-color:#004F59">
+
+                            <h:column>
+                                <f:facet name="header">Tracking No</f:facet>
+                                    #{myvariable.TRACKNO}
+                            </h:column>
+                            <h:column>
+                                <f:facet name="header">
+                                    Receiver</f:facet>
+                                    #{myvariable.RECEIVER}
+                            </h:column>
+                            <h:column>
+                                <f:facet name="header">
+                                    Location</f:facet>
+                                    #{myvariable.LOCATION}
+                            </h:column>
+                            <h:column>
+                                <f:facet name="header">Sender</f:facet>
+                                    #{myvariable.SENDER}
+                            </h:column>
+                            <h:column>
+                                <f:facet name="header">
+                                    Product</f:facet>
+                                    #{myvariable.PRODUCT}
+                            </h:column>
+                            <h:column>
+                                <f:facet name="header">Last Time</f:facet>
+                                    #{myvariable.DATE}
+                            </h:column>
+                        </h:dataTable>
+                    </div>
                 </div>
-                <img src="imageintroduction.jpg" style="width:30%;float:right;height:30%;margin-right:2%;margin-top:2%"></img>		
 
             </div>
+
+
+
+
+
             <div class="footer">
             </div>
             <div class="copyright">
                 <p style="float:left;color:white;font-weight:bold;margin-left:40%">Copyright 2019 - Maritime Global Export Logistics</p>
             </div>
         </div>
+
     </h:body>
 </html>
 
