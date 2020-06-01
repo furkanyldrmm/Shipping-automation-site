@@ -8,4 +8,4 @@ dynamic shipping automation site includes database with jsf
 ![Acd85cxc4s5ız](https://user-images.githubusercontent.com/61662546/83123128-4095d800-a0dd-11ea-817b-9633229f4416.png)
 ![Acd85cx4sız](https://user-images.githubusercontent.com/61662546/83123133-412e6e80-a0dd-11ea-8b49-cb399d33a0ff.png)
 ![Ad4sız](https://user-images.githubusercontent.com/61662546/83123139-41c70500-a0dd-11ea-8dde-ed306ddaf6cb.png)
-![Ad84sız](https://user-images.githubusercontent.com/61662546/83123144-4390c880-a0dd-11ea-9418-3d034456ee16.png)
+
